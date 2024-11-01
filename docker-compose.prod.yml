@@ -1,0 +1,11 @@
+version: "3"
+services: 
+  node-app:
+    container_name: node-app-production-container
+    build: 
+      context: .
+      target: production
+    environment:
+      - MY_ENV=Production
+    env_file:
+      - ./.env
